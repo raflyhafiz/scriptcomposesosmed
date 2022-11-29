@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  web:
+    container_name: web
+    image: rafly21/webpesbuk:latest
+    ports:
+      - "8090:80"
+    depends_on:
+      - db
+  db:
+    container_name: db
+    image: rafly21/dbpesbuk:latest
